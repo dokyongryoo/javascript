@@ -19,6 +19,12 @@
       nn.get('#bell').currentTime = 0.39
       // everytime click on element with class of doorbell, run bgChange - also have a duration property
       nn.get('#bell').play()
+      const text = nn.get('.doorbell').textContent
+      if (text === 'hello') {
+        nn.get('.doorbell').textContext = nn.random()
+      }
+      // console.log(text)
+      // check text shows up in console
     }
     // const button = document.querySelector('.doorbell')
     // button.addEventListener('click', bgChange)
