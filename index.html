@@ -1,30 +1,14 @@
 <style>
-  nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /*     more responsive css-grid unit, fraction of the site */
-    /*     grid-template-columns: 100px 100px 100px; if want 3 columns */
-    background-color: pink;
-    padding: 10px;
-    /*     left: 100px; only possible when specify position e.g. as absolute */
-  }
-
-  .box {
-    background: red;
+  button {
     border: 1px solid black;
-    text-align: center;
-  }
-
-  @media (max-width: 415px) {
-    nav {
-      grid-template-columns: 1fr;
-    }
-
-    /*     only run code if it's less than 415 */
+    padding: 20px 30px;
+    background-color: pink;
+    cursor: pointer;
   }
 </style>
-<nav>
-  <a class="box">1</a>
-  <a class="box">2</a>
-  <a class="box">3</a>
-</nav>
+<button>
+  click me
+</button>
+<script>
+  
+</script>
