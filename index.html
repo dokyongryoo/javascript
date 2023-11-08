@@ -8,16 +8,22 @@
 </style>
 <body>
   <button>click me</button>
-  <audio src="https://commons.wikimedia.org/wiki/File:Sound_Effect_-_Door_Bell.ogg"></audio>
-  <script src="https://cdn.jsdeliver.net/gn/netizenorg/netnet-standard-libary/build/nn.min.js"></script>
+  <audio id="bell" src="https://commons.wikimedia.org/wiki/File:Sound_Effect_-_Door_Bell.ogg"></audio>
+  <script src="https://cdn.jsdelivr.net/gn/netizenorg/netnet-standard-libary/build/nn.min.js"></script>
   <script>
     function bgChange() {
-      document.body.style.backgroundColor = nn.randomColor()
+      // document.body.style.backgroundColor = nn.randomColor()
+      nn.get('.doorbell').css({
+        backgroundColor: nn.randomColor()
+      })
+      nn.get('#bell').currentTime = 0.39
+      // everytime click on element with class of doorbell, run bgChange - also have a duration property
+      nn.get('#bell').play()
     }
     // const button = document.querySelector('.doorbell')
     // button.addEventListener('click', bgChange)
     // check my document & grab first element with the .doorbell, querySelectorAll matches all
     // button.style.border = '20px solid red'
-    nn.get('.doorbell')
+    nn.get('.doorbell').on('click',bgChange)
   </script>
 </body>
