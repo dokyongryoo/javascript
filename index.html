@@ -21,7 +21,8 @@
       nn.get('#bell').play()
       const text = nn.get('.doorbell').textContent
       if (text === 'hello') {
-        nn.get('.doorbell').textContext = nn.random()
+        nn.get('.doorbell').textContent = nn.random(0, 20)
+        // get random # between 0 and 20
       }
       // console.log(text)
       // check text shows up in console
